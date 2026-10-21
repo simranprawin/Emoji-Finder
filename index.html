@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Emoji Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">😊</span>
+      Emoji Finder
+    </a>
+
+    <button id="themeButton" class="theme-button">
+      🌙
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-badge">FIND YOUR PERFECT EMOJI</div>
+
+      <h1>
+        Search.
+        <span>Copy. Express.</span>
+      </h1>
+
+      <p>
+        Find emojis quickly, copy them with one click, and
+        express yourself better.
+      </p>
+    </section>
+
+    <section class="finder-card">
+      <div class="search-area">
+        <span class="search-icon">🔍</span>
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search for an emoji..."
+          autocomplete="off"
+        />
+
+        <button id="clearButton" class="clear-button">
+          ×
+        </button>
+      </div>
+
+      <div class="action-row">
+        <button id="randomButton" class="random-button">
+          🎲 Random Emoji
+        </button>
+
+        <span id="emojiCount" class="emoji-count">
+          0 emojis
+        </span>
+      </div>
+
+      <div class="category-tabs">
+        <button
+          class="category-tab active"
+          data-category="All"
+        >
+          All
+        </button>
+
+        <button
+          class="category-tab"
+          data-category="Smileys"
+        >
+          Smileys
+        </button>
+
+        <button
+          class="category-tab"
+          data-category="People"
+        >
+          People
+        </button>
+
+        <button
+          class="category-tab"
+          data-category="Animals"
+        >
+          Animals
+        </button>
+
+        <button
+          class="category-tab"
+          data-category="Food"
+        >
+          Food
+        </button>
+
+        <button
+          class="category-tab"
+          data-category="Travel"
+        >
+          Travel
+        </button>
+
+        <button
+          class="category-tab"
+          data-category="Objects"
+        >
+          Objects
+        </button>
+
+        <button
+          class="category-tab"
+          data-category="Symbols"
+        >
+          Symbols
+        </button>
+      </div>
+
+      <div id="emojiGrid" class="emoji-grid"></div>
+    </section>
+
+    <section class="recent-card">
+      <div class="section-heading">
+        <div>
+          <h2>Recently copied</h2>
+          <p>Your recent emojis are saved in this browser.</p>
+        </div>
+
+        <button id="clearRecentButton" class="clear-recent-button">
+          Clear
+        </button>
+      </div>
+
+      <div id="recentList" class="recent-list">
+        <p class="empty-message">
+          No recently copied emojis yet.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <footer>
+    <p>Emoji Finder</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
